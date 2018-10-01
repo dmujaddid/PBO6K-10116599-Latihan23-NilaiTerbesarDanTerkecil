@@ -38,7 +38,8 @@ public class PBO6K10116599Latihan23NilaiTerbesarDanTerkecil {
         banyakNilai = scan.nextInt();
         int []a = new int [banyakNilai];
         
-        for (int z=1; z<banyakNilai; z++)
+        for (int z=1; z<banyakNilai;
+                z++)
         
         for(int i=0;i<banyakNilai;i++) { 
             System.out.print("Masukkan Nilai Mahasiswa ke-" +z+ " = ");
@@ -74,7 +75,7 @@ public class PBO6K10116599Latihan23NilaiTerbesarDanTerkecil {
             }
         }
 
-      
+        
         // Menampilkan nilai terbesar dan terkecil
         System.out.println();     
         System.out.println("Nilai terbesar adalah " +nilaiTerbesar+ " ");
