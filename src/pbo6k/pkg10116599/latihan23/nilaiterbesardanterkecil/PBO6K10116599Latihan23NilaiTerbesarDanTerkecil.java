@@ -34,25 +34,51 @@ public class PBO6K10116599Latihan23NilaiTerbesarDanTerkecil {
         System.out.print("Masukkan Nama Petugas : ");
         namaPetugas=scan.next();
         
-        System.out.print("Masukkan Banyaknya Mahasiswa : ");        
+        System.out.print("Masukkan Banyaknya Nilai Mahasiswa : ");        
         banyakNilai = scan.nextInt();
+        int []a = new int [banyakNilai];
+        
+        for (int z=1; z<banyakNilai; z++)
+        
+        for(int i=0;i<banyakNilai;i++) { 
+            System.out.print("Masukkan Nilai Mahasiswa ke-" +z+ " = ");
+              z++;
+            a[i]=scan.nextInt();
+        }
+        
+
+        
+        // Menampilkan Nilai Mahasiswa yang diinputkan
+            System.out.println();
+            System.out.println("=====Hasil NIlai Mahasiswa=====");
+                for(int j=0;j<banyakNilai;j++) {
+                    System.out.println(" Nilai Mahasiswa ke-"+(j+1)+": "+a[j]);
+            }
         
         
-         
-         
-          int i;
-        i=1;
-         do {
-              System.out.print("Nilai Mahasiswa ke-" +i+ " : ");
-              i++;
-        nilai = scan.nextInt();
-         } while(i<=banyakNilai);
-       
+        // Nilai terbesar        
+                int nilaiTerbesar = a[0];        
+        for(int i=1;i<banyakNilai;i++) {
+            if(nilaiTerbesar < a[i])
+            {
+                nilaiTerbesar=a[i];
+            }
+        } 
+        
+        // Nilai terkecil
+        int nilaiTerkecil=a[0];        
+        for(int i=1;i<banyakNilai;i++)
+        {
+            if(nilaiTerkecil>a[i]) {
+                nilaiTerkecil=a[i];
+            }
+        }
+
       
-        System.out.println();
-        System.out.println("=====Hasil NIlai Mahasiswa=====");
-        System.out.println("Nilai terbesar : ");
-        System.out.println("Nilai terkecil : ");
+        // Menampilkan nilai terbesar dan terkecil
+        System.out.println();     
+        System.out.println("Nilai terbesar adalah " +nilaiTerbesar+ " ");
+        System.out.println("Nilai terkecil adalah " +nilaiTerkecil+ " ");
         System.out.println();
         System.out.println("Petugas : " +namaPetugas);
         
